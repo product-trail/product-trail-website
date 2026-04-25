@@ -505,6 +505,16 @@ function goPage(n) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function filterCategory(cat) {
+    activeCategory = cat;
+
+    // Track Analytics
+    window.trackEvent('Category Filtered', { category: cat, source: 'Jobs' });
+
+    renderCategoryFilters();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 /* ── Filter & Search ─────────────────────────── */
 function applyFilters() {
     const search = document.getElementById('search-input')?.value.toLowerCase() || '';
@@ -542,6 +552,14 @@ function clearFilters() {
 function openApplyModal(id) {
     const job = JOBS.find(j => j.id === id);
     if (!job) return;
+
+    // Track Analytics
+    window.trackEvent('Job Applied', {
+        job_id: job.id,
+        job_title: job.title,
+        company: job.company,
+        source: 'Detailed Modal'
+    });
 
     const modal = document.getElementById('apply-modal');
     const content = document.getElementById('modal-content');

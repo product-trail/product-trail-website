@@ -47,6 +47,10 @@ function renderCategoryFilters() {
 
 function filterCategory(cat) {
   activeCategory = cat;
+
+  // Track Analytics
+  window.trackEvent('Category Filtered', { category: cat, source: 'Resources' });
+
   renderCategoryFilters();
   renderAllResources();
 }
@@ -106,7 +110,8 @@ function renderAllResources() {
       <p class="resource-source" style="font-size:.8rem;color:var(--clr-text-muted);margin-bottom:4px">📌 ${r.author}</p>
       <p>${r.desc}</p>
       <div class="resource-card-footer">
-        <a href="${r.link}" target="_blank" rel="noopener" class="resource-access-link" style="font-size:.85rem">
+        <a href="${r.link}" target="_blank" rel="noopener" class="resource-access-link" style="font-size:.85rem"
+           onclick="window.trackEvent('Resource Accessed', { title: '${r.title}', category: '${r.category}' })">
           Access →
         </a>
       </div>

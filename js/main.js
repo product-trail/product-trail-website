@@ -3,6 +3,36 @@
    Particles, scroll-reveal, navbar, toast
    ============================================ */
 
+// Generic Track Function
+window.trackEvent = (name, props = {}) => {
+  if (window.mixpanel) {
+    mixpanel.track(name, {
+      ...props,
+      path: window.location.pathname,
+      page: document.title
+    });
+  }
+};
+
+// Initialization and Page Timing
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.mixpanel) {
+    mixpanel.track_pageview();
+    // Start timer for time spent
+    mixpanel.time_event('Time Spent');
+  }
+});
+
+// Track time spent on exit
+window.addEventListener('beforeunload', () => {
+  if (window.mixpanel) {
+    mixpanel.track('Time Spent', {
+      page: document.title,
+      path: window.location.pathname
+    });
+  }
+});
+
 /* ── Particle Canvas ─────────────────────────── */
 (function initParticles() {
   const canvas = document.getElementById('particle-canvas');
