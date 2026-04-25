@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Free PM learning resources — books, courses, YouTube channels, frameworks, communities, and tools for every Product Manager." />
+    <title>Free PM Resources — Product Trail | producttrail.in</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/resources.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <div class="aurora-bg"></div>
+    <div class="noise-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><i data-lucide="rocket"></i></div>
+                <span>Product<span class="gradient-text">Trail</span></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Browse Jobs</a></li>
+                <li><a href="resources.html" style="color:var(--clr-primary-light)">PM Resources</a></li>
+                <li><a href="post-job.html">For Recruiters</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="jobs.html" class="btn btn-secondary btn-sm">Jobs</a>
+                <a href="post-job.html" class="btn btn-primary btn-sm">Post a Job</a>
+            </div>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="resources-page">
+        <div class="container">
+
+            <!-- Hero -->
+            <div class="resources-hero">
+                <div class="section-label reveal" style="justify-content:center"><i data-lucide="book-open"></i> Free
+                    Resources</div>
+                <h1 class="reveal reveal-delay-1">
+                    Your Free<br><span class="gradient-text">PM Learning Hub</span>
+                </h1>
+                <p class="reveal reveal-delay-2">
+                    30+ handpicked resources — books, courses, frameworks, tools, and communities — all free. From APM
+                    to GPM, we've got your growth covered.
+                </p>
+
+                <!-- Category Filters -->
+                <div id="category-filters" class="category-filters reveal reveal-delay-3">
+                    <!-- Rendered by resources.js -->
+                </div>
+            </div>
+
+            <!-- Featured Resources -->
+            <div class="featured-resources">
+                <h2 class="reveal"><i data-lucide="star"
+                        style="color:var(--clr-accent-gold);fill:var(--clr-accent-gold);width:20px;height:20px;vertical-align:middle"></i>
+                    Must-Have Resources <span class="badge badge-gold"
+                        style="font-size:.75rem;vertical-align:middle">Editor's Pick</span></h2>
+                <div class="featured-grid" id="featured-resources-grid">
+                    <!-- Rendered by resources.js -->
+                </div>
+            </div>
+
+            <!-- All Resources -->
+            <div class="all-resources" style="padding-bottom:var(--space-3xl)">
+                <h2 class="reveal" id="resources-heading">All Resources</h2>
+                <div class="resources-grid" id="all-resources-grid">
+                    <!-- Rendered by resources.js -->
+                </div>
+            </div>
+
+            <!-- Learning Path Timeline -->
+            <div class="learning-path-section">
+                <div class="text-center reveal" style="margin-bottom:var(--space-2xl)">
+                    <div class="section-label" style="justify-content:center"><i data-lucide="map-pin"></i> Learning
+                        Path</div>
+                    <h2 class="text-section-title reveal reveal-delay-1">Your PM Journey:<br><span
+                            class="gradient-text">Beginner to GPM</span></h2>
+                    <p class="subtitle reveal reveal-delay-2">A structured path to grow from zero to Group Product
+                        Manager. Use this as your personal roadmap.</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Beginner -->
+                    <div class="timeline-item beginner reveal">
+                        <div class="timeline-dot beginner"><i data-lucide="sprout" style="width:16px;height:16px"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-stage">Stage 1 — Beginner</div>
+                            <h4>Build Your Foundation</h4>
+                            <p>Learn what PMs actually do, the core frameworks, and how tech companies work. Start here
+                                if you're transitioning into PM or just starting out.</p>
+                            <div class="timeline-resources">
+                                <span class="badge badge-green">Inspired (Book)</span>
+                                <span class="badge badge-green">PM School Free Course</span>
+                                <span class="badge badge-green">CIRCLES Framework</span>
+                                <span class="badge badge-green">Product Hunt</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Intermediate -->
+                    <div class="timeline-item intermediate reveal reveal-delay-1">
+                        <div class="timeline-dot intermediate"><i data-lucide="zap" style="width:16px;height:16px"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-stage">Stage 2 — Intermediate</div>
+                            <h4>Master the Craft</h4>
+                            <p>Deepen your discovery, prioritization, and execution skills. Work on real product
+                                problems, learn to write better PRDs, and develop your PM voice.</p>
+                            <div class="timeline-resources">
+                                <span class="badge badge-gold">Continuous Discovery Habits</span>
+                                <span class="badge badge-gold">RICE Framework</span>
+                                <span class="badge badge-gold">North Star Metric Guide</span>
+                                <span class="badge badge-gold">Lenny's Newsletter</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advanced -->
+                    <div class="timeline-item advanced reveal reveal-delay-2">
+                        <div class="timeline-dot advanced"><i data-lucide="trophy" style="width:16px;height:16px"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-stage">Stage 3 — Advanced</div>
+                            <h4>Lead & Scale</h4>
+                            <p>Move into strategic product thinking, team leadership, and cross-functional influence.
+                                This is your GPM and VP-level preparation phase.</p>
+                            <div class="timeline-resources">
+                                <span class="badge badge-purple">Reforge Programs</span>
+                                <span class="badge badge-purple">OKR Guide (Google)</span>
+                                <span class="badge badge-purple">Shreyas Doshi Threads</span>
+                                <span class="badge badge-purple">Mind the Product Community</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="glass-card reveal"
+                style="padding:var(--space-xl);text-align:center;margin-bottom:var(--space-3xl);background:linear-gradient(135deg,rgba(124,58,237,.1),rgba(6,182,212,.06));border-color:rgba(124,58,237,.2)">
+                <h2 class="text-section-title" style="margin-bottom:var(--space-sm)">Ready to Apply? <i
+                        data-lucide="rocket" style="display:inline-block;vertical-align:middle"></i></h2>
+                <p style="color:var(--clr-text-secondary);margin-bottom:var(--space-lg);font-size:1rem">Explore 200+ PM
+                    jobs curated from India's top startups and unicorns.</p>
+                <a href="jobs.html" class="btn btn-primary btn-lg">Browse PM Jobs →</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top:none;padding-top:0">
+                <p>© 2026 <a href="index.html" style="color:var(--clr-primary-light)">Product Trail</a> ·
+                    producttrail.in</p>
+                <p style="font-size:0.85rem;color:var(--clr-text-muted)">
+                    <a href="jobs.html" style="color:var(--clr-text-secondary)"><i data-lucide="search"
+                            style="width:14px;height:14px;display:inline-block;vertical-align:middle"></i> Browse
+                        Jobs</a>
+                    &nbsp;·&nbsp;
+                    <a href="post-job.html" style="color:var(--clr-text-secondary)"><i data-lucide="building"
+                            style="width:14px;height:14px;display:inline-block;vertical-align:middle"></i> Post a
+                        Job</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/resources.js"></script>
+</body>
+
+</html>

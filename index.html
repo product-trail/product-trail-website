@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Product Trail — India's premier job portal exclusively for Product Management roles. Browse PM, APM, Senior PM jobs and free learning resources." />
+  <title>Product Trail — PM Jobs & Resources | producttrail.in</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <!-- Ambient Background -->
+  <div class="aurora-bg"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><i data-lucide="rocket"></i></div>
+        <span>Product<span class="gradient-text">Trail</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Browse Jobs</a></li>
+        <li><a href="resources.html">PM Resources</a></li>
+        <li><a href="post-job.html">For Recruiters</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="jobs.html" class="btn btn-secondary btn-sm">Find Jobs</a>
+        <a href="post-job.html" class="btn btn-primary btn-sm">Post a Job</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero-section">
+    <canvas id="particle-canvas" style="position:absolute;inset:0;width:100%;height:100%"></canvas>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="hero-badge-inner"><i data-lucide="sparkles"></i> New</span>
+        India's Only Portal Built For PM Careers
+      </div>
+
+      <h1 class="hero-title reveal reveal-delay-1">
+        Find Your Next<br>
+        <span class="gradient-text">Product</span> Role<br>
+        <span style="font-size:0.7em;opacity:0.7">Built for PMs, by PMs</span>
+      </h1>
+
+      <p class="hero-subtitle reveal reveal-delay-2">
+        100% focused on Product Management. Browse curated PM, APM, and GPM roles across India's top startups and
+        unicorns — and level-up with free resources.
+      </p>
+
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="jobs.html" class="btn btn-primary btn-lg">
+          <i data-lucide="search"></i> Browse PM Jobs
+        </a>
+        <a href="resources.html" class="btn btn-secondary btn-lg">
+          <i data-lucide="book-open"></i> Free PM Resources
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── Stats ── -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number" data-count="200" data-suffix="+">0</div>
+          <p class="stat-label">PM Jobs Listed</p>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-number" data-count="30" data-suffix="+">0</div>
+          <p class="stat-label">Free Resources</p>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-number" data-count="50" data-suffix="+">0</div>
+          <p class="stat-label">Top Recruiters</p>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-number" data-count="2500" data-suffix="+">0</div>
+          <p class="stat-label">Job Seekers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Featured Jobs ── -->
+  <section class="featured-jobs-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-label"><i data-lucide="flame"></i> Latest Openings</div>
+          <h2 class="text-section-title reveal">Featured PM Jobs</h2>
+        </div>
+        <a href="jobs.html" class="btn btn-secondary reveal">View All Jobs →</a>
+      </div>
+
+      <div class="jobs-scroll" id="home-jobs">
+        <!-- Rendered by homeJobs() inline script below -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Why Product Trail ── -->
+  <section class="why-section" id="about">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:var(--space-2xl)">
+        <div class="section-label reveal" style="justify-content:center"><i data-lucide="lightbulb"></i> Why Us</div>
+        <h2 class="text-section-title reveal reveal-delay-1">Built Differently.<br>For Product People.</h2>
+        <p class="reveal reveal-delay-2"
+          style="color:var(--clr-text-secondary);max-width:480px;margin:16px auto 0;font-size:1rem;line-height:1.7">
+          We curate only PM roles — no engineering noise, no HR fluff. Just signal.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card glass-card reveal">
+          <div class="feature-icon feature-icon-purple"><i data-lucide="target"></i></div>
+          <h3>PM-Only Jobs</h3>
+          <p>Every job on Product Trail is a Product Management role. No developer or designer jobs diluting your
+            search.</p>
+        </div>
+        <div class="feature-card glass-card reveal reveal-delay-1">
+          <div class="feature-icon feature-icon-teal"><i data-lucide="link"></i></div>
+          <h3>Direct LinkedIn Links</h3>
+          <p>Apply directly through LinkedIn — your profile, your network, your advantage. No middlemen or fake
+            application portals.</p>
+        </div>
+        <div class="feature-card glass-card reveal reveal-delay-2">
+          <div class="feature-icon feature-icon-gold"><i data-lucide="book-open"></i></div>
+          <h3>Free PM Learning Hub</h3>
+          <p>30+ curated free resources — frameworks, books, courses, communities — to level up your PM career from
+            beginner to GPM.</p>
+        </div>
+        <div class="feature-card glass-card reveal reveal-delay-3">
+          <div class="feature-icon feature-icon-purple"><i data-lucide="building"></i></div>
+          <h3>Recruiter Friendly</h3>
+          <p>Recruiters and HRs can directly post PM jobs on the platform. Build your pipeline from a focused PM talent
+            pool.</p>
+        </div>
+        <div class="feature-card glass-card reveal reveal-delay-4">
+          <div class="feature-icon feature-icon-pink"><i data-lucide="newspaper"></i></div>
+          <h3>Daily Job Updates</h3>
+          <p>New PM roles from LinkedIn and company career pages added daily across India's top startups, unicorns, and
+            funded companies.</p>
+        </div>
+        <div class="feature-card glass-card reveal reveal-delay-5">
+          <div class="feature-icon feature-icon-teal"><i data-lucide="map-pin"></i></div>
+          <h3>Made for India PMs</h3>
+          <p>Built with the Indian PM ecosystem in mind — salary benchmarks in INR, companies you recognise, and
+            communities relevant to you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Resources Teaser ── -->
+  <section class="resources-teaser">
+    <div class="container">
+      <div class="resources-teaser-inner">
+        <div>
+          <div class="section-label reveal"><i data-lucide="book-open"></i> Learn for Free</div>
+          <h2 class="text-section-title reveal reveal-delay-1">
+            Your Free<br><span class="gradient-text">PM School</span><br>Is Right Here
+          </h2>
+          <p class="reveal reveal-delay-2"
+            style="color:var(--clr-text-secondary);font-size:1rem;line-height:1.7;margin:16px 0 24px;max-width:440px">
+            From CIRCLES method to JTBD, Lenny's Newsletter to PM School — we've curated the best free resources to take
+            you from zero to GPM.
+          </p>
+          <a href="resources.html" class="btn btn-primary reveal reveal-delay-3">Explore Resources →</a>
+        </div>
+        <div class="resource-preview-cards reveal reveal-delay-2">
+          <div class="resource-preview-card glass-card">
+            <div class="resource-icon-sm"
+              style="background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.25)"><i data-lucide="book"
+                style="width:16px;height:16px"></i></div>
+            <div class="resource-preview-info">
+              <h4>Inspired by Marty Cagan</h4>
+              <p>The PM Bible — Free preview</p>
+            </div>
+          </div>
+          <div class="resource-preview-card glass-card">
+            <div class="resource-icon-sm" style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.25)">
+              <i data-lucide="graduation-cap" style="width:16px;height:16px"></i>
+            </div>
+            <div class="resource-preview-info">
+              <h4>PM School Free Course</h4>
+              <p>India's most loved PM course</p>
+            </div>
+          </div>
+          <div class="resource-preview-card glass-card">
+            <div class="resource-icon-sm"
+              style="background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.25)"><i
+                data-lucide="circle-dot" style="width:16px;height:16px"></i></div>
+            <div class="resource-preview-info">
+              <h4>CIRCLES Framework</h4>
+              <p>PM interview design method</p>
+            </div>
+          </div>
+          <div class="resource-preview-card glass-card">
+            <div class="resource-icon-sm"
+              style="background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.25)"><i data-lucide="mic"
+                style="width:16px;height:16px"></i></div>
+            <div class="resource-preview-info">
+              <h4>Lenny's Podcast</h4>
+              <p>Top PM leaders, free weekly</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Recruiter CTA ── -->
+  <section class="recruiter-cta-section">
+    <div class="container">
+      <div class="recruiter-cta-inner reveal">
+        <div class="recruiter-cta-text">
+          <div class="section-label"><i data-lucide="building"></i> For Recruiters</div>
+          <h2>Hire <span class="gradient-text">Top PM Talent</span><br>From India's Focused PM Pool</h2>
+          <p>
+            Post your PM openings directly on Product Trail. Reach a highly targeted audience of PM candidates — from
+            APMs to GPMs — who are actively looking for their next role.
+          </p>
+          <div class="recruiter-benefits">
+            <div class="benefit-item">
+              <div class="benefit-check">✓</div>
+              Free job posting during beta launch
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-check">✓</div>
+              100% PM-focused talent pool
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-check">✓</div>
+              Go live within 24 hours of approval
+            </div>
+          </div>
+        </div>
+        <div style="flex-shrink:0">
+          <a href="post-job.html" class="btn btn-primary btn-lg">Post a Job Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Newsletter ── -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h3><i data-lucide="mail"></i> Get PM Jobs in Your Inbox</h3>
+          <p>New PM roles every week, directly from LinkedIn and company portals.</p>
+        </div>
+        <div class="newsletter-form">
+          <input class="form-input" type="email" id="newsletter-email" placeholder="your@email.com" />
+          <button class="btn btn-primary" onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-icon"><i data-lucide="rocket"></i></div>
+            <span>Product<span class="gradient-text">Trail</span></span>
+          </div>
+          <p>India's only dedicated job portal for Product Managers. Curated PM roles, free resources, and a thriving
+            community — all in one place.</p>
+          <div class="social-links" style="margin-top:16px">
+            <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn">in</a>
+            <a href="https://twitter.com" target="_blank" class="social-link" title="Twitter/X"><i data-lucide="twitter"
+                style="width:14px;height:14px"></i></a>
+            <a href="https://instagram.com" target="_blank" class="social-link" title="Instagram"><i
+                data-lucide="instagram" style="width:14px;height:14px"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>For Job Seekers</h4>
+          <a href="jobs.html">Browse PM Jobs</a>
+          <a href="jobs.html?type=remote">Remote Jobs</a>
+          <a href="jobs.html?exp=0-2">APM Roles</a>
+          <a href="jobs.html?exp=5+">Senior PM Roles</a>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="resources.html">All Resources</a>
+          <a href="resources.html?cat=Frameworks">PM Frameworks</a>
+          <a href="resources.html?cat=Courses">Free Courses</a>
+          <a href="resources.html?cat=Books">PM Books</a>
+        </div>
+        <div class="footer-col">
+          <h4>Recruiters</h4>
+          <a href="post-job.html">Post a Job</a>
+          <a href="post-job.html#why">Why Post Here</a>
+          <a href="mailto:hello@producttrail.in">Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Product Trail · producttrail.in · Made with <i data-lucide="heart"
+            style="width:12px;height:12px;display:inline-block;vertical-align:middle;color:#ec4899"></i> for India's PM
+          community</p>
+        <p style="font-size:0.8rem;color:var(--clr-text-muted)">
+          <span class="glow-dot"></span> Beta — New features shipping weekly
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Render 6 featured jobs on homepage
+    (function homeJobs() {
+      const jobs = [
+        { emoji: '💳', title: 'PM — Growth', company: 'Razorpay', loc: 'Bangalore', type: 'Full-Time', tags: ['Fintech', 'Growth'], time: '2 days ago', id: 1 },
+        { emoji: '🧡', title: 'APM Program', company: 'Swiggy', loc: 'Bangalore', type: 'Full-Time', tags: ['APM', 'Consumer'], time: '1 day ago', id: 2 },
+        { emoji: '💎', title: 'PM — Consumer', company: 'CRED', loc: 'Bangalore', type: 'Full-Time', tags: ['Consumer', 'Fintech'], time: '1 day ago', id: 15 },
+        { emoji: '🤖', title: 'PM — AI/ML', company: 'Sarvam AI', loc: 'Bangalore', type: 'Full-Time', tags: ['AI', 'GenAI'], time: '2 days ago', id: 6 },
+        { emoji: '📊', title: 'PM — B2B SaaS', company: 'Chargebee', loc: 'Remote', type: 'Remote', tags: ['B2B', 'SaaS'], time: '5 hours ago', id: 4 },
+        { emoji: '📬', title: 'Sr PM — Dev Exp', company: 'Postman', loc: 'Remote', type: 'Remote', tags: ['DevTools', 'Remote'], time: '1 week ago', id: 10 },
+      ];
+
+      const el = document.getElementById('home-jobs');
+      if (!el) return;
+      el.innerHTML = jobs.map(j => `
+    <a href="jobs.html" class="job-card-home glass-card reveal">
+      <div class="company-logo-home">${j.emoji}</div>
+      <h3>${j.title}</h3>
+      <div class="job-meta-home">
+        <span class="job-meta-item">🏢 ${j.company}</span>
+        <span class="job-meta-item">📍 ${j.loc}</span>
+      </div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+        <span class="badge badge-purple">${j.type}</span>
+        ${j.tags.map(t => `<span class="badge badge-teal">${t}</span>`).join('')}
+      </div>
+      <div class="job-card-footer">
+        <span class="job-posted-time">⏰ ${j.time}</span>
+        <span class="btn btn-primary btn-sm">Apply →</span>
+      </div>
+    </a>
+  `).join('');
+
+      setTimeout(() => {
+        document.querySelectorAll('#home-jobs .reveal').forEach(el => el.classList.add('visible'));
+      }, 200);
+    }());
+
+    function subscribeNewsletter() {
+      const email = document.getElementById('newsletter-email')?.value;
+      if (!email || !email.includes('@')) {
+        window.showToast('Please enter a valid email', 'alert-circle');
+        return;
+      }
+      window.showToast(`You're subscribed! PM jobs coming to ${email}`, 'check-circle');
+      document.getElementById('newsletter-email').value = '';
+    }
+  </script>
+</body>
+
+</html>

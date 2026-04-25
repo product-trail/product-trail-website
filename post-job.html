@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Post PM jobs on Product Trail and reach India's most focused product management talent pool. Free during beta." />
+    <title>Post a PM Job — Product Trail | producttrail.in</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/recruiter.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <div class="aurora-bg"></div>
+    <div class="noise-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><i data-lucide="rocket"></i></div>
+                <span>Product<span class="gradient-text">Trail</span></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Browse Jobs</a></li>
+                <li><a href="resources.html">PM Resources</a></li>
+                <li><a href="post-job.html" style="color:var(--clr-primary-light)">For Recruiters</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="jobs.html" class="btn btn-secondary btn-sm">Browse Jobs</a>
+            </div>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="recruiter-page">
+        <div class="container">
+
+            <!-- Hero -->
+            <div class="recruiter-hero">
+                <div class="section-label reveal" style="justify-content:center"><i data-lucide="building"></i> For
+                    Recruiters</div>
+                <h1 class="reveal reveal-delay-1">
+                    Post PM Jobs.<br><span class="gradient-text">Hire the Best</span> Product Minds.
+                </h1>
+                <p class="reveal reveal-delay-2">
+                    Reach a laser-focused pool of Product Managers — from APMs to GPMs. No noise, just serious PM
+                    candidates actively looking for their next role.
+                </p>
+            </div>
+
+            <!-- Two Column Layout -->
+            <div class="recruiter-layout">
+
+                <!-- Sidebar Benefits -->
+                <div class="recruiter-sidebar reveal">
+                    <h2>Why Post on<br><span class="gradient-text">Product Trail</span>?</h2>
+                    <p>We are 100% dedicated to the Product Management ecosystem. Every visitor is a PM or PM aspirant —
+                        your job gets seen by the most relevant candidates.</p>
+
+                    <div class="benefit-cards">
+                        <div class="benefit-card">
+                            <div class="benefit-card-icon"><i data-lucide="target"></i></div>
+                            <div>
+                                <h4>PM-Specific Audience</h4>
+                                <p>Zero noise. Every candidate on Product Trail is a current or aspiring Product
+                                    Manager.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-card-icon"><i data-lucide="zap" style="width:18px;height:18px"></i>
+                            </div>
+                            <div>
+                                <h4>Go Live in 24 Hours</h4>
+                                <p>Submit your job and it goes live after our quick review. Simple, fast, no complicated
+                                    forms.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-card-icon"><i data-lucide="banknote" style="width:18px;height:18px"></i>
+                            </div>
+                            <div>
+                                <h4>Free During Beta</h4>
+                                <p>We are in beta launch phase — posting is completely free. Limited time offer for
+                                    early recruiters.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-card-icon"><i data-lucide="link"></i></div>
+                            <div>
+                                <h4>LinkedIn Integration</h4>
+                                <p>Share your LinkedIn job link and we'll route candidates directly to your existing job
+                                    post.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"We posted a Senior PM role and got quality referrals within 3 days.
+                            The product trail audience is exactly who we needed."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">RK</div>
+                            <div>
+                                <div class="testimonial-name">Rahul K.</div>
+                                <div class="testimonial-role">TA Lead, Series B Startup</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multi-Step Form -->
+                <div class="recruiter-form-card glass-card reveal reveal-delay-1">
+
+                    <!-- Progress Steps -->
+                    <div class="form-steps">
+                        <div class="form-step">
+                            <div class="step-circle active" id="step-circle-1">1</div>
+                            <div class="step-info">
+                                <span class="step-title">Your Details</span>
+                                <span class="step-subtitle">Recruiter info</span>
+                            </div>
+                        </div>
+                        <div class="step-connector" id="step-connector-1"></div>
+                        <div class="form-step">
+                            <div class="step-circle inactive" id="step-circle-2">2</div>
+                            <div class="step-info">
+                                <span class="step-title">Job Details</span>
+                                <span class="step-subtitle">Role info</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Recruiter Info -->
+                    <div class="form-step-content active" id="form-step-1">
+                        <h2 class="form-step-title">Tell Us About Yourself</h2>
+                        <p class="form-step-desc">We'd love to know who's posting. This helps us verify real jobs from
+                            real recruiters.</p>
+
+                        <div style="display:flex;flex-direction:column;gap:var(--space-md)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Full Name *</label>
+                                    <input class="form-input" id="rec-name" type="text" placeholder="Priya Sharma" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Work Email *</label>
+                                    <input class="form-input" id="rec-email" type="email"
+                                        placeholder="priya@company.com" />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Company Name *</label>
+                                    <input class="form-input" id="rec-company" type="text" placeholder="Razorpay" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Your Designation *</label>
+                                    <input class="form-input" id="rec-designation" type="text"
+                                        placeholder="HR Manager / TA Lead" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">LinkedIn Profile (optional)</label>
+                                <input class="form-input" id="rec-linkedin" type="url"
+                                    placeholder="https://linkedin.com/in/your-profile" />
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button id="btn-next-step" class="btn btn-primary">Continue to Job Details <i
+                                    data-lucide="arrow-right"
+                                    style="width:16px;height:16px;display:inline-block;vertical-align:middle"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Job Details -->
+                    <div class="form-step-content" id="form-step-2">
+                        <h2 class="form-step-title">Post Your PM Job</h2>
+                        <p class="form-step-desc">Fill in the details about the role. Be specific — it leads to
+                            better-matched candidates.</p>
+
+                        <div style="display:flex;flex-direction:column;gap:var(--space-md)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Job Title *</label>
+                                    <input class="form-input" id="job-title" type="text"
+                                        placeholder="Senior Product Manager" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Company Name *</label>
+                                    <input class="form-input" id="job-company" type="text" placeholder="Acme Corp" />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Location *</label>
+                                    <input class="form-input" id="job-location" type="text"
+                                        placeholder="Bangalore / Remote" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Job Type *</label>
+                                    <select class="form-select" id="job-type">
+                                        <option value="">Select type</option>
+                                        <option value="Full-Time">Full-Time</option>
+                                        <option value="Remote">Remote</option>
+                                        <option value="Contract">Contract</option>
+                                        <option value="Part-Time">Part-Time</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Experience Required *</label>
+                                    <select class="form-select" id="job-exp">
+                                        <option value="">Select range</option>
+                                        <option value="0-2">0–2 years (APM)</option>
+                                        <option value="3-5">3–5 years (PM)</option>
+                                        <option value="5+">5+ years (Senior PM / GPM)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Salary Range (optional)</label>
+                                    <input class="form-input" id="job-salary" type="text" placeholder="₹25–40 LPA" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Job Description *</label>
+                                <textarea class="form-textarea" id="job-desc" rows="5"
+                                    placeholder="Describe the role, responsibilities, and what makes it exciting for a PM candidate. Include team size, product area, and key impact..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Apply URL (LinkedIn Job Link or Career Page)</label>
+                                <input class="form-input" id="job-apply-url" type="url"
+                                    placeholder="https://linkedin.com/jobs/view/..." />
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button id="btn-prev-step" class="btn btn-secondary"><i data-lucide="arrow-left"
+                                    style="width:16px;height:16px;display:inline-block;vertical-align:middle"></i>
+                                Back</button>
+                            <button id="btn-next-step" class="btn btn-primary">Submit Job Posting <i
+                                    data-lucide="rocket"
+                                    style="width:16px;height:16px;display:inline-block;vertical-align:middle"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Success State -->
+                    <div class="success-state" id="success-state">
+                        <div class="success-icon-wrap"><i data-lucide="check" style="width:32px;height:32px"></i></div>
+                        <h3>Job Posted Successfully!</h3>
+                        <p>Your PM role at <strong id="success-company">your company</strong> has been submitted. Our
+                            team will review it and it will go live within 24 hours.</p>
+                        <div style="display:flex;flex-direction:column;gap:12px;align-items:center">
+                            <a href="jobs.html" class="btn btn-primary btn-lg">View Job Listings →</a>
+                            <button id="btn-post-another" class="btn btn-secondary">Post Another Job</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top:none;padding-top:0">
+                <p>© 2026 <a href="index.html" style="color:var(--clr-primary-light)">Product Trail</a> ·
+                    producttrail.in</p>
+                <p style="font-size:0.85rem;color:var(--clr-text-muted)">
+                    <a href="jobs.html" style="color:var(--clr-text-secondary)"><i data-lucide="search"
+                            style="width:14px;height:14px;display:inline-block;vertical-align:middle"></i> Browse
+                        Jobs</a>
+                    &nbsp;·&nbsp;
+                    <a href="resources.html" style="color:var(--clr-text-secondary)"><i data-lucide="book-open"
+                            style="width:14px;height:14px;display:inline-block;vertical-align:middle"></i> Free
+                        Resources</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/recruiter.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+/* ==============================================
+   PRODUCT TRAIL — RECRUITER PAGE STYLES
+   ============================================= */
+
+.recruiter-page {
+    padding-top: 120px;
+    min-height: 100vh;
+}
+
+.recruiter-hero {
+    text-align: center;
+    padding-bottom: var(--space-2xl);
+}
+
+.recruiter-hero h1 {
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: var(--space-md);
+}
+
+.recruiter-hero p {
+    color: var(--clr-text-secondary);
+    font-size: 1.0625rem;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Two Column Layout */
+.recruiter-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    padding-bottom: var(--space-3xl);
+    align-items: flex-start;
+}
+
+/* Sidebar Benefits */
+.recruiter-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.recruiter-sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: var(--space-md);
+    letter-spacing: -0.02em;
+}
+
+.recruiter-sidebar p {
+    color: var(--clr-text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-xl);
+}
+
+.benefit-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.benefit-card {
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    border-radius: var(--radius-md);
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    transition: border-color var(--transition-base);
+}
+
+.benefit-card:hover {
+    border-color: rgba(124, 58, 237, 0.3);
+}
+
+.benefit-card-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.benefit-card h4 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.benefit-card p {
+    font-size: 0.875rem;
+    color: var(--clr-text-muted);
+    margin: 0;
+}
+
+.testimonial-card {
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.06));
+    border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.testimonial-text {
+    font-size: 0.9375rem;
+    font-style: italic;
+    color: var(--clr-text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.testimonial-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+}
+
+.testimonial-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.testimonial-role {
+    font-size: 0.8rem;
+    color: var(--clr-text-muted);
+}
+
+/* Multi-Step Form */
+.recruiter-form-card {
+    padding: var(--space-xl);
+}
+
+/* Progress Steps */
+.form-steps {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+}
+
+.form-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.form-step:last-child {
+    flex: 0;
+}
+
+.step-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    transition: all var(--transition-base);
+}
+
+.step-circle.inactive {
+    background: var(--clr-surface-md);
+    border: 1px solid var(--clr-border);
+    color: var(--clr-text-muted);
+}
+
+.step-circle.active {
+    background: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
+    color: white;
+    box-shadow: 0 0 16px rgba(124, 58, 237, 0.5);
+}
+
+.step-circle.done {
+    background: rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    color: var(--clr-green);
+}
+
+.step-info {
+    flex: 1;
+}
+
+.step-title {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    display: block;
+}
+
+.step-subtitle {
+    font-size: 0.75rem;
+    color: var(--clr-text-muted);
+}
+
+.step-connector {
+    flex: 1;
+    height: 2px;
+    background: var(--clr-border);
+    margin: 0 var(--space-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.step-connector.done {
+    background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+}
+
+/* Form Steps Content */
+.form-step-content {
+    display: none;
+}
+
+.form-step-content.active {
+    display: block;
+}
+
+.form-step-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+}
+
+.form-step-desc {
+    font-size: 0.9rem;
+    color: var(--clr-text-secondary);
+    margin-bottom: var(--space-xl);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--clr-border);
+}
+
+/* Success State */
+.success-state {
+    display: none;
+    text-align: center;
+    padding: var(--space-2xl);
+}
+
+.success-state.show {
+    display: block;
+}
+
+.success-icon-wrap {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.15);
+    border: 2px solid rgba(16, 185, 129, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto var(--space-lg);
+    animation: successPop 0.5s var(--transition-spring) forwards;
+}
+
+@keyframes successPop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.success-state h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: var(--space-sm);
+}
+
+.success-state p {
+    color: var(--clr-text-secondary);
+    font-size: 0.9375rem;
+    max-width: 360px;
+    margin: 0 auto var(--space-xl);
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .recruiter-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .recruiter-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 640px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-steps {
+        display: none;
+    }
+
+    .recruiter-form-card {
+        padding: var(--space-lg);
+    }
+}

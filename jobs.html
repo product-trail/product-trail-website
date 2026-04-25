@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Browse 200+ PM, APM, Senior PM, and GPM jobs across India's top startups and unicorns. Apply via LinkedIn or quick apply." />
+    <title>PM Jobs — Product Trail | producttrail.in</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/jobs.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <div class="aurora-bg"></div>
+    <div class="noise-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><i data-lucide="rocket"></i></div>
+                <span>Product<span class="gradient-text">Trail</span></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html" style="color:var(--clr-primary-light)">Browse Jobs</a></li>
+                <li><a href="resources.html">PM Resources</a></li>
+                <li><a href="post-job.html">For Recruiters</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="post-job.html" class="btn btn-primary btn-sm">Post a Job</a>
+            </div>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="jobs-page-hero">
+        <div class="container">
+            <div class="section-label reveal" style="justify-content:center"><i data-lucide="search"></i> Job Listings
+            </div>
+            <h1 class="reveal reveal-delay-1">
+                <span class="gradient-text">Product Management</span><br>Jobs in India
+            </h1>
+            <p class="reveal reveal-delay-2">Curated PM roles from India's top startups, unicorns & funded companies.
+                Apply via LinkedIn — fast, direct, no friction.</p>
+
+            <!-- Search -->
+            <div class="search-bar-wrapper reveal reveal-delay-3">
+                <span class="search-icon"><i data-lucide="search"></i></span>
+                <input class="search-input" id="search-input" type="text"
+                    placeholder="Search by role, company, or skill (e.g. 'APM', 'Fintech', 'Remote')" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Layout -->
+    <div class="container">
+        <div class="jobs-layout">
+
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+                <div class="filter-panel glass-card-solid">
+                    <div class="filter-panel-header">
+                        <h3><i data-lucide="sliders-horizontal"></i> Filters</h3>
+                        <span class="filter-clear" onclick="clearFilters()">Clear All</span>
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="filter-group-title">Job Type</div>
+                        <div class="filter-options">
+                            <label class="filter-option"><input type="checkbox" name="type" value="Full-Time">
+                                Full-Time</label>
+                            <label class="filter-option"><input type="checkbox" name="type" value="Remote">
+                                Remote</label>
+                            <label class="filter-option"><input type="checkbox" name="type" value="Contract">
+                                Contract</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-divider"></div>
+
+                    <div class="filter-group">
+                        <div class="filter-group-title">Experience</div>
+                        <div class="filter-options">
+                            <label class="filter-option"><input type="checkbox" name="exp" value="0-2"> 0–2 years
+                                (APM)</label>
+                            <label class="filter-option"><input type="checkbox" name="exp" value="3-5"> 3–5 years
+                                (PM)</label>
+                            <label class="filter-option"><input type="checkbox" name="exp" value="5+"> 5+ years (Senior
+                                PM)</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-divider"></div>
+
+                    <div class="filter-group">
+                        <div class="filter-group-title">Location</div>
+                        <div class="filter-options">
+                            <label class="filter-option"><input type="checkbox" name="loc" value="Bangalore">
+                                Bangalore</label>
+                            <label class="filter-option"><input type="checkbox" name="loc" value="Mumbai">
+                                Mumbai</label>
+                            <label class="filter-option"><input type="checkbox" name="loc" value="Delhi"> Delhi /
+                                NCR</label>
+                            <label class="filter-option"><input type="checkbox" name="loc" value="Gurugram">
+                                Gurugram</label>
+                            <label class="filter-option"><input type="checkbox" name="loc" value="Remote">
+                                Remote</label>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Job Results -->
+            <div class="jobs-results">
+                <div class="jobs-results-header">
+                    <p class="results-count" id="results-count">Loading jobs...</p>
+                    <select class="sort-select" id="sort-select">
+                        <option value="newest">Newest First</option>
+                        <option value="salary">Highest Salary</option>
+                    </select>
+                </div>
+
+                <div class="jobs-list" id="jobs-list">
+                    <!-- Rendered by jobs.js -->
+                </div>
+
+                <div class="pagination" id="pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apply Modal -->
+    <div class="modal-overlay apply-modal" id="apply-modal">
+        <div class="modal-box">
+            <button class="modal-close" id="modal-close-btn">✕</button>
+            <div id="modal-content">
+                <!-- Rendered by jobs.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top:none;padding-top:0">
+                <p>© 2026 <a href="index.html" style="color:var(--clr-primary-light)">Product Trail</a> ·
+                    producttrail.in</p>
+                <p style="font-size:0.85rem;color:var(--clr-text-muted)">
+                    <a href="resources.html" style="color:var(--clr-text-secondary)"><i data-lucide="book-open"
+                            style="width:14px;height:14px;display:inline-block;vertical-align:middle"></i> Free PM
+                        Resources</a>
+                    &nbsp;·&nbsp;
+                    <a href="post-job.html" style="color:var(--clr-text-secondary)"><i data-lucide="building"
+                            style="width:14px;height:14px;display:inline-block;vertical-align:middle"></i> Post a
+                        Job</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/jobs.js"></script>
+</body>
+
+</html>
